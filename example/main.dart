@@ -28,7 +28,7 @@ void main() async {
     print(e.toString());
   }
 
-  // View basic information of an account.
+  // View information of an account.
   try {
     var info = await rpc.viewAccount(accountId);
     print(info);

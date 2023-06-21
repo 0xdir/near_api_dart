@@ -1,6 +1,6 @@
 import './providers/json_rpc_provider.dart';
 
-/// A Future-based library for querying Near RPC providers.
+/// The main library object.
 class Near {
   Providers providers = Providers();
 }

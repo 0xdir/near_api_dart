@@ -1,6 +1,5 @@
 import 'dart:convert';
-
-/// Thrown when the server returns an error in the RPC reponse.
+/// Thrown when there are is an error in the RPC response.
 class RPCError implements Exception {
   final dynamic error;
   late String errorName;

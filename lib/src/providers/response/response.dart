@@ -1,6 +1,6 @@
 /// A helper class to parse the response from the RPC.
 ///
-/// Contains the [error], if any, or [result] as sent by the server.
+/// Contains the [error], if any, or [result].
 class RPCResponse {
   final Map<String, dynamic> data;
   Map<String, dynamic> error = {};
