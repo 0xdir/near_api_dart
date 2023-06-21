@@ -6,11 +6,10 @@ import '../providers/response/response.dart';
 import '../providers/response/result.dart';
 import '../utils/json_rpc.dart';
 
+/// Default if no URL is passed to the provider.
 const defaultURL = 'https://rpc.testnet.near.org';
 
 /// Implementation of the JsonRPC Provider.
-///
-/// Refer to [Provider] for explanation of each method.
 class JsonRpcProvider extends Provider {
   late final JsonRPC _jsonRPC;
 

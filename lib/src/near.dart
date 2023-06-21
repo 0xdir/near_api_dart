@@ -9,6 +9,7 @@ class Near {
 ///
 /// Currently, only JsonRPC is supported.
 class Providers {
+  /// Returns a JSON RPC provider.
   JsonRpcProvider jsonRpcProvider(String? url) {
     return JsonRpcProvider(url);
   }
