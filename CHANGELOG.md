@@ -1,8 +1,12 @@
+## 1.0.2
+
+* Fix formatting.
+
 ## 1.0.1
 
 * Fix formatting.
 
-* ## 1.0.0
+## 1.0.0
 
 * Initial release.
 
