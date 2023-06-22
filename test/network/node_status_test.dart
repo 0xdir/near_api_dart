@@ -7,9 +7,9 @@ void main() {
     Near near = Near();
     JsonRpcProvider rpc = near.providers.jsonRpcProvider(rpcURL);
     rpc.nodeStatus().then((value) => expect(
-      value,
-      completes,
-    ));
+          value,
+          completes,
+        ));
     rpc.close();
   });
 }

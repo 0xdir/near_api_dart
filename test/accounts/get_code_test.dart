@@ -12,13 +12,13 @@ void main() {
           completes,
         ));
     rpc.getCode(accountId, mode: 'hash').then((value) => expect(
-      value,
-      completes,
-    ));
+          value,
+          completes,
+        ));
     rpc.getCode(accountId, mode: 'base64').then((value) => expect(
-      value,
-      completes,
-    ));
+          value,
+          completes,
+        ));
     rpc.close();
   });
 }

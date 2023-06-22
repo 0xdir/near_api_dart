@@ -91,8 +91,7 @@ class JsonRpcProvider extends Provider {
       'finality': finality,
       'account_ids': accountIds,
     };
-    RPCResponse response =
-        await _makeRPCCall('EXPERIMENTAL_changes', params);
+    RPCResponse response = await _makeRPCCall('EXPERIMENTAL_changes', params);
     return response.result;
   }
 
@@ -124,8 +123,7 @@ class JsonRpcProvider extends Provider {
       'account_ids': accountIds,
       'key_prefix_base64': keyPrefixBase64,
     };
-    RPCResponse response =
-        await _makeRPCCall('EXPERIMENTAL_changes', params);
+    RPCResponse response = await _makeRPCCall('EXPERIMENTAL_changes', params);
     return response.result;
   }
 
@@ -139,8 +137,7 @@ class JsonRpcProvider extends Provider {
       'finality': finality,
       'account_ids': accountIds,
     };
-    RPCResponse response =
-        await _makeRPCCall('EXPERIMENTAL_changes', params);
+    RPCResponse response = await _makeRPCCall('EXPERIMENTAL_changes', params);
     return response.result;
   }
 
@@ -245,8 +242,7 @@ class JsonRpcProvider extends Provider {
       'finality': finality,
       'keys': keys,
     };
-    RPCResponse response =
-        await _makeRPCCall('EXPERIMENTAL_changes', params);
+    RPCResponse response = await _makeRPCCall('EXPERIMENTAL_changes', params);
     return response.result;
   }
 
@@ -261,8 +257,7 @@ class JsonRpcProvider extends Provider {
       'finality': finality,
       'account_ids': accountIds,
     };
-    RPCResponse response =
-        await _makeRPCCall('EXPERIMENTAL_changes', params);
+    RPCResponse response = await _makeRPCCall('EXPERIMENTAL_changes', params);
     return response.result;
   }
 
@@ -354,8 +349,7 @@ class JsonRpcProvider extends Provider {
     String signedTransaction,
   ) async {
     List<String> params = [signedTransaction];
-    RPCResponse response =
-        await _makeRPCCall('broadcast_tx_async', params);
+    RPCResponse response = await _makeRPCCall('broadcast_tx_async', params);
     return response.result;
   }
 
@@ -364,8 +358,7 @@ class JsonRpcProvider extends Provider {
     String signedTransaction,
   ) async {
     List<String> params = [signedTransaction];
-    RPCResponse response =
-        await _makeRPCCall('broadcast_tx_commit', params);
+    RPCResponse response = await _makeRPCCall('broadcast_tx_commit', params);
     return response.result;
   }
 
@@ -385,8 +378,7 @@ class JsonRpcProvider extends Provider {
     String senderAccountId,
   ) async {
     List<String> params = [transactionHash, senderAccountId];
-    RPCResponse response =
-        await _makeRPCCall('EXPERIMENTAL_tx_status', params);
+    RPCResponse response = await _makeRPCCall('EXPERIMENTAL_tx_status', params);
     return response.result;
   }
 
@@ -395,8 +387,7 @@ class JsonRpcProvider extends Provider {
     String receiptId,
   ) async {
     Map<String, String> params = {'receipt_id': receiptId};
-    RPCResponse response =
-        await _makeRPCCall('EXPERIMENTAL_receipt', params);
+    RPCResponse response = await _makeRPCCall('EXPERIMENTAL_receipt', params);
     return response.result;
   }
 

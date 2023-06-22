@@ -7,14 +7,16 @@ void main() {
     String validatorAccountId = 'dev-1588039999690';
     Near near = Near();
     JsonRpcProvider rpc = near.providers.jsonRpcProvider(rpcURL);
-    rpc.callFunction(
-      validatorAccountId,
-      'get_num',
-      'e30=',
-    ).then((value) => expect(
-          value,
-          completes,
-        ));
+    rpc
+        .callFunction(
+          validatorAccountId,
+          'get_num',
+          'e30=',
+        )
+        .then((value) => expect(
+              value,
+              completes,
+            ));
     rpc.close();
   });
 }

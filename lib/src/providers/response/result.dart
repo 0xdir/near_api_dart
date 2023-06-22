@@ -6,7 +6,7 @@ class GetCodeResult {
   late String codeBase64;
   late String hash;
 
-  GetCodeResult(this.result){
+  GetCodeResult(this.result) {
     codeBase64 = result['code_base64'];
     hash = result['hash'];
   }
