@@ -1,8 +1,8 @@
-/// Defines Near RPC API methods.
+/// Defines Near RPC API methods
 ///
 /// Supports those listed on https://docs.near.org/api/rpc/
 abstract class Provider {
-  /// Retrieve information about an account's access keys.
+  /// Get information about an account's access keys
   ///
   /// Returns information about a single access key for an [accountId].
   /// If permission of the key is FunctionCall, it will return more
@@ -14,7 +14,7 @@ abstract class Provider {
     String finality = 'final',
   });
 
-  /// Get all access keys for an [accountId].
+  /// Get all access keys for an [accountId]
   Future<Map<String, dynamic>> viewAccessKeyList(
     String accountId, {
     String finality = 'final',
@@ -45,7 +45,7 @@ abstract class Provider {
     String changesType = 'all_access_key_changes',
   });
 
-  /// Query the network and get details about specific blocks.
+  /// Get details about specific blocks
   ///
   /// Select by blocks by [blockId] or [blockHash].
   /// Gets details of the latest block if no params are provided.
@@ -55,7 +55,7 @@ abstract class Provider {
     String? blockHash,
   });
 
-  /// Changes in Block
+  /// Get changes in block
   ///
   /// Returns changes in block for given block height or hash.
   /// Search by [blockId] or [finality], but not both.
@@ -65,7 +65,7 @@ abstract class Provider {
     int? blockId,
   });
 
-  /// Returns details of a specific chunk.
+  /// Get details of a specific chunk
   ///
   /// You can run a block details query to get a valid chunk hash.
   /// Provide either [chunkId], or both [blockId] and [shardId].
@@ -75,14 +75,13 @@ abstract class Provider {
     int? shardId,
   });
 
-  /// Gets the balance of the account with the specified [accountId].
+  /// Get the balance of the account with the specified [accountId]
   Future<BigInt> getBalance(
     String accountId, {
     String finality = 'final',
   });
 
-  /// Returns the contract code (Wasm binary) deployed to the
-  /// account.
+  /// Get the contract code (Wasm binary) deployed to the account
   ///
   /// Choose between receiving the code in 'base64' or 'hash' using [mode].
   /// Defaults to 'hash' if no [mode] is provided.
@@ -92,13 +91,13 @@ abstract class Provider {
     String mode = 'hash',
   });
 
-  /// Returns basic account information.
+  /// Get basic account information
   Future<Map<String, dynamic>> viewAccount(
     String accountId, {
     String finality = 'final',
   });
 
-  /// View account changes
+  /// Get account changes
   ///
   /// Get account changes from transactions for ane or more [accountIds].
   Future<Map<String, dynamic>> viewAccountChanges(
@@ -154,7 +153,7 @@ abstract class Provider {
     String finality = 'final',
   });
 
-  /// Retrieve gas price
+  /// Get latest gas price
   ///
   /// Gets gas price for a specific [blockHeight] or [blockHash].
   /// Returns the latest block's gas price if no parameters are provided.
@@ -163,14 +162,14 @@ abstract class Provider {
     String? blockHash,
   });
 
-  /// Genesis Config
+  /// Get genesis config
   ///
   /// Returns current genesis configuration.
   Future<Map<String, dynamic>> genesisConfig();
 
-  /// Protocol Config
+  /// Get protocol config
   ///
-  /// Gets protocol configuration for a [blockId].
+  /// Returns protocol configuration for a [blockId].
   ///
   /// Useful for finding current storage and transaction costs.
   Future<Map<String, dynamic>> protocolConfig({
@@ -178,17 +177,17 @@ abstract class Provider {
     String finality = 'final',
   });
 
-  /// Node Status
+  /// Get node status
   ///
   /// Gets the status of the node and the current set of validators.
   Future<Map<String, dynamic>> nodeStatus();
 
-  /// Network Info
+  /// Get network info
   ///
   /// Returns the current state of node network connections.
   Future<Map<String, dynamic>> networkInfo();
 
-  /// Validation Status
+  /// Get validation status
   ///
   /// Queries active validators on the network returning details
   /// and the state of validation on the blockchain.
@@ -225,7 +224,7 @@ abstract class Provider {
     String signedTransaction,
   );
 
-  /// Transaction Status
+  /// Get transaction status
   ///
   /// Queries status of a transaction by [transactionHash] sent by
   /// [senderAccountId].
@@ -236,7 +235,7 @@ abstract class Provider {
     String senderAccountId,
   );
 
-  /// Transaction Status with Receipts
+  /// Get transaction status with receipts
   ///
   /// Queries status of a transaction by [transactionHash] sent by
   /// [senderAccountId].
@@ -250,14 +249,14 @@ abstract class Provider {
     String senderAccountId,
   );
 
-  /// Receipt by ID
+  /// Get receipt by Id
   ///
   /// Gets a receipt by [receiptId], without execution status or outcome.
   Future<Map<String, dynamic>> receiptById(
     String receiptId,
   );
 
-  /// Maintenance Windows
+  /// Get maintenance windows
   ///
   /// Gets the maintenance windows in current epoch for a validator.
   ///
@@ -271,6 +270,6 @@ abstract class Provider {
     String accountId,
   );
 
-  /// Close the client.
+  /// Close the client
   void close();
 }
