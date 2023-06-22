@@ -4,7 +4,7 @@
 abstract class Provider {
   /// Retrieve information about an account's access keys.
   ///
-  /// Returns information about a single access key for an [accountId.
+  /// Returns information about a single access key for an [accountId].
   /// If permission of the key is FunctionCall, it will return more
   /// details such as the allowance, receiver_id, and method_names.
   Future<Map<String, dynamic>> viewAccessKey(
