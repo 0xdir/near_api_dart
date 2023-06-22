@@ -1,4 +1,3 @@
-## 0.0.1
+## 1.0.0
 
-* Initial release. 
-* Added support for calling `Near RPC API` endpoints.
+* Initial release.

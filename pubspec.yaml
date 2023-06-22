@@ -1,6 +1,6 @@
 name: near_api_dart
-description:  A library to interact with NEAR RPC endpoints.
-version: 0.0.1
+description:  A Future-based library for querying Near Protocol's RPC providers.
+version: 1.0.0
 repository: https://github.com/0xdir/near_api_dart
 
 environment:
